@@ -37,3 +37,9 @@ jobs:
     - name: Test with pytest
       run: |
         poetry run task test
+    - name: security with pytest
+      run: |
+        poetry run task security
+    - name: formatter with pytest
+      run: |
+        poetry run task formatter  
