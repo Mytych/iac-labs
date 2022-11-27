@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: analysis
-    needs: build
+    needs: build 
     defaults:
       run:
         working-directory: ./example-app
@@ -110,6 +110,7 @@ jobs:
   unittests:
 
     runs-on: ubuntu-latest
+    needs: [lint, security, formatter]
     defaults:
       run:
         working-directory: ./example-app
