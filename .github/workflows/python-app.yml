@@ -37,6 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: analysis
+    needs: build
     defaults:
       run:
         working-directory: ./example-app
@@ -61,6 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: analysis
+    needs: build
     defaults:
       run:
         working-directory: ./example-app
@@ -85,6 +87,7 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: analysis
+    needs: build
     defaults:
       run:
         working-directory: ./example-app
